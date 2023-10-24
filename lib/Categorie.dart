@@ -6,14 +6,16 @@ class Categorie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.0,
+      height: 100.0,
       width: 100.0,
       child:ListTile(
+        onTap: (){
+          },
         title: Image.asset(this.imageLocation,
           width: 100.0,
-          height: 80.0,
+          height: 60.0,
         ),
-        subtitle: Text(this.imageCaption),
+        subtitle: Text(this.imageCaption,style: TextStyle(fontWeight: FontWeight.bold,),),
       ) ,
     );
   }

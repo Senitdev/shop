@@ -62,6 +62,11 @@ flutter:
   assets:
      - images/carousel/im1.jpg
      - images/carousel/im2.jpg
+     - images/categories/c1.png
+     - images/categories/c2.png
+     - images/categories/c3.png
+     - images/categories/c4.png
+     - images/categories/c5.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

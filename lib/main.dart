@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:shop/Categorie.dart';
 void main(){
   runApp(const Myapp());
 }
@@ -9,6 +10,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch:Colors.red
       ),
@@ -22,6 +24,7 @@ class homePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       drawer: Drawer(
         child:ListView(
           children: [
@@ -90,17 +93,45 @@ class homePage extends StatelessWidget {
               color: Colors.blue,
               child: Image.asset("images/carousel/im1.jpg",fit:BoxFit.cover,),
             ),
+            
+            Divider(height: 10.0,),
+            Text('Catégorie',style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),),
             Divider(height: 10.0,),
             Container(
               height: 80.8,
-              color: Colors.green,
               child:ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  
+                Categorie(
+                  imageCaption:("Blouse"),
+                  imageLocation:("images/categories/c2.png"),
+                ),
+                  Categorie(
+                    imageCaption:("chaussure"),
+                    imageLocation:("images/categories/c1.png"),
+                  ),
+                  Categorie(
+                    imageCaption:("Puma"),
+                    imageLocation:("images/categories/c2.png"),
+                  ),
+                  Categorie(
+                    imageCaption:("Snaker"),
+                    imageLocation:("images/categories/c3.png"),
+                  ),
+                  Categorie(
+                    imageCaption:("Chemise"),
+                    imageLocation:("images/categories/c4.png"),
+                  ),
                 ],
               )
             ),
+            Divider(height: 20.0,),
+            Text('Product',style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),),
+            Divider(height: 10.0,),
+            Container(
+              height: 320,
+              color: Colors.green,
+            )
           ],
         )
       ),
