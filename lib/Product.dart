@@ -5,6 +5,7 @@ class Product extends StatefulWidget {
 
   @override
   State<Product> createState() => _ProductState();
+
 }
 
 class _ProductState extends State<Product> {
@@ -25,9 +26,9 @@ class _ProductState extends State<Product> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleProdut(
+  return Container(
 
-    );
+  );
   }
 }
 
@@ -39,30 +40,8 @@ class SingleProdut extends StatelessWidget {
   SingleProdut({this.prodname,this.prodprice,this.prodoldPrice,this.prodpicture});
   @override
   Widget build(BuildContext context) {
-   return Card(
-     child: Hero(
-       tag:this.prodname,
-       child: Material(
-         child: InkWell(
-           onTap: (){},
-           child:GridTile(
-             footer: Container(
-               color: Colors.white,
-               child: Row(
-                 children: [
-                   Expanded(
-                     child: Text(this.prodname,style: TextStyle(fontWeight:FontWeight.bold),),
-                   ),
-                   new Text("${this.prodprice}",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),)
-                 ],
-               )
+  return SingleProdut(
 
-             ),
-             child: Image.asset(this.prodpicture,fit:BoxFit.cover,),
-           ),
-         ),
-       ),
-     ),
-   );
+  );
   }
 }
